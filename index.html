@@ -143,24 +143,23 @@
       </div>
       <div class="row">
         <div id="map">
+
           <script>
-          function myMap() {
-            var myCenter = new google.maps.LatLng(43.003828, 11.957837);
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {
-              center: myCenter,
-              zoom: 18
-            };
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-            var marker = new google.maps.Marker({
-              position: myCenter,
-              animation: google.maps.Animation.BOUNCE
-            });
-            marker.setMap(map);
-          }
+            function initMap() {
+              var porsenna = {lat: 43.003828, lng: 11.957837};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: porsenna
+              });
+              var marker = new google.maps.Marker({
+                position: porsenna,
+                map: map,
+                animation: google.maps.Animation.BOUNCE
+              });
+            }
           </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wvYo7_oIiAyFu6Zt6agFPHYrNhrYp4s&callback=initMap"
-  type="text/javascript"></script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkWIJdQU2JC2lAP7Y9Zj6tWx6h77X6V_8&callback=initMap"
+type="text/javascript"></script>
         </div>
       </div>
     </section>
