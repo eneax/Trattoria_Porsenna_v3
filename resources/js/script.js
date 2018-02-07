@@ -12,7 +12,6 @@ $(document).ready(function() {
   });
 
   // Scroll Nav
-  // It selects the "a" element that have an href that starts with "#"
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       // Figure out element to scroll to
